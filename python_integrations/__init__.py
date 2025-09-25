@@ -1,0 +1,1 @@
+# Python integrations for NeoProtect Notifier
