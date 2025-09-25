@@ -20,7 +20,7 @@ A real-time monitoring and notification system for DDoS attacks detected by the 
 
 | Integration        |     Status     | Priority | Notes                        |
 |:-------------------|:--------------:|:--------:|:-----------------------------|
-| 🤖 Discord Bot     |    ✅ Ready     |   High   | Fully implemented and tested |
+| 🤖 Discord Bot     |    ✅ Ready     |   High   | Go & Python implementations |
 | 📢 Discord Webhook |    ✅ Ready     |  Medium  | Fully implemented and tested |
 | 📨 Telegram        | 🔲 Not Started |  Medium  | Planned                      |
 | 📧 SMTP Email      | 🔲 Not Started |  Medium  | Planned                      |
@@ -128,6 +128,30 @@ Create a `config.json` file in the application directory:
 | `blacklistedIPs`      | List of IPs to exclude from monitoring            | `[]`                            |
 | `enabledIntegrations` | List of integrations to enable                    | `[]`                            |
 | `integrationConfigs`  | Configuration for each integration                | `{}`                            |
+
+## 🐍 Python Discord Bot Implementation
+
+**NEW**: This repository now includes a complete Python rewrite of the Discord bot integration using the `discord.py` library!
+
+### Why Python Implementation?
+
+- **Modern async/await syntax** for better performance
+- **discord.py library** which is more actively maintained than discordgo
+- **Better error handling** with more descriptive error messages
+- **Cleaner code structure** with better separation of concerns
+- **Type hints** for better code maintainability
+
+### Quick Start (Python)
+
+```bash
+cd python_integrations
+pip install -r requirements.txt
+cp config.example.json config.json
+# Edit config.json with your settings
+python main.py --config config.json
+```
+
+See the [Python Implementation README](python_integrations/README.md) for detailed setup instructions.
 
 ## 📢 Available Integrations
 
